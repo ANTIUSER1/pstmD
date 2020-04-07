@@ -1,0 +1,767 @@
+{
+	"info": {
+		"_postman_id": "c3194868-f66e-441f-ba76-25226455173f",
+		"name": "TESTPack_Loyalty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ChargeLoyalty",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 500,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 30\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 30\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_2.5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 40\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2.5\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 50\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_35 (error accounting code)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": \"[accountingCode] parameter is incorrect\",\r",
+							"        \"errMessage\": \"[accountingCode] parameter received DXT01_35 not found\",\r",
+							"        \"data\": null\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_35\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT01_3 Negative tariff",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": \"[tariffSum] parameter is incorrect\",\r",
+							"        \"errMessage\": \"[tariffSum] parameter must be more than 0 but received -1000\",\r",
+							"        \"data\": null\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": -1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT02",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 0\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT02\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Cash DXT03",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"legal\",\r",
+							"            \"points\": 0\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT03\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Points DXT01_0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"illegal\",\r",
+							"            \"points\": 0\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Points DXT01_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"illegal\",\r",
+							"            \"points\": 0\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty Points DXT01_2.5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e17df73-0203-403f-9420-df048ee9a63d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"chargeLoyaltyResponse\": {\r",
+							"        \"errCode\": null,\r",
+							"        \"errMessage\": null,\r",
+							"        \"data\": {\r",
+							"            \"status\": \"illegal\",\r",
+							"            \"points\": 0\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2.5\"\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "c914bef1-af26-4ea5-a4f5-e5a263399d82",
+		"name": "Онлайн регистрация",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SU-SEL-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 5100,\r",
+							"    \"departureAirportCode\": \"SEL\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"AVIH2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": true\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-SEL-AVIH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 5100,\r",
+							"    \"departureAirportCode\": \"SEL\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"AVIH\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-ICN-AVIH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected ={\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 5100,\r",
+							"    \"departureAirportCode\": \"ICN\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"AVIH\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-ICN-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected ={\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 5100,\r",
+							"    \"departureAirportCode\": \"ICN\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"AVIH2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DL-ICN-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"airlineCode\": \"DL\",\r",
+							"    \"flightNumber\": 300,\r",
+							"    \"departureAirportCode\": \"ICN\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"AVIH2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": true\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"DL\",\r\n    \"flightNumber\": 300,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-KZN-INAD2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () =>  {\r",
+							"  var jsonExpected = {\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 100,\r",
+							"    \"departureAirportCode\": \"KSN\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"INAD2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"KSN\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-SPU-INAD2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2b99f1f-6cd8-4884-814a-7509054a915d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () =>  {\r",
+							"  var jsonExpected ={\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 100,\r",
+							"    \"departureAirportCode\": \"SPU\",\r",
+							"    \"ssrCodes\": [\r",
+							"        \"INAD2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"SPU\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b6144183-3de5-4347-aef3-5c0e02a7f78e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d0e413e4-eb3b-4a6c-b618-0c96e898ccca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6bc9b9bc-3505-44bf-beda-4589d97bad40",
+			"key": "URL",
+			"value": "https://gw.aeroflot.io/api/pr/flightInfo/v1/checkOnlineRegistrationAvailability",
+			"type": "string"
+		},
+		{
+			"id": "9bc3eb00-5af0-41b8-9b47-26a505b781be",
+			"key": "X-ibm-client-ID",
+			"value": "ef6bdfdb-63f0-465b-9324-4e52f15ae8ed",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
