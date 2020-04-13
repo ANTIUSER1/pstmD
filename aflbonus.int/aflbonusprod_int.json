@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ffb08184-0667-49a2-8e9b-23d30850689f",
-		"name": "ODM_Prod",
+		"_postman_id": "bdd7f2f5-4cdb-49e6-a141-9aede34126a3",
+		"name": "aflbonusprod.int",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -190,8 +190,7 @@
 								"key": "Content-Type",
 								"type": "text",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -230,7 +229,6 @@
 						"method": "POST",
 						"header": [
 							{
-								"disabled": false,
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
@@ -273,7 +271,6 @@
 						"method": "POST",
 						"header": [
 							{
-								"disabled": false,
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
@@ -316,7 +313,6 @@
 						"method": "POST",
 						"header": [
 							{
-								"disabled": false,
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"type": "text",
@@ -366,8 +362,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -404,8 +399,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -441,7 +435,6 @@
 						"method": "POST",
 						"header": [
 							{
-								"disabled": false,
 								"key": "Content-Type",
 								"value": "application/json"
 							}
@@ -480,8 +473,7 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -526,8 +518,7 @@
 								"key": "Content-Type",
 								"type": "text",
 								"name": "Content-Type",
-								"value": "application/json",
-								"disabled": false
+								"value": "application/json"
 							}
 						],
 						"body": {

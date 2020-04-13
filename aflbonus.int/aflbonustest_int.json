@@ -1,10 +1,124 @@
 {
 	"info": {
-		"_postman_id": "5f4d33f6-0265-427e-816b-9eb434acf8db",
-		"name": "ODM_Test",
+		"_postman_id": "3c366262-e9c0-4d4c-99ba-744907f65ddf",
+		"name": "aflbonustest.int",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Spend_lk",
+			"item": [
+				{
+					"name": "Spend_Lk",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"inputParamsLk\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"all\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"172",
+								"20",
+								"207",
+								"70"
+							],
+							"port": "9090",
+							"path": [
+								"DecisionService",
+								"rest",
+								"aflBonus",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spend_Lk (awardType = ticket)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ea9965d6-abde-4ae8-979d-053579a786f8",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only 1 element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards.length).to.eql(1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only OW element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards[0].awardType).to.eql(\"OW\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"inputParamsLk\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"ticket\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"172",
+								"20",
+								"207",
+								"70"
+							],
+							"port": "9090",
+							"path": [
+								"DecisionService",
+								"rest",
+								"aflBonus",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
 		{
 			"name": "Spend",
 			"request": {
@@ -204,46 +318,6 @@
 						"rest",
 						"aflBonus",
 						"chargeLoyalty"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Spend_Lk",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"inputParamsLk\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"all\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
-					"options": {
-						"raw": {}
-					}
-				},
-				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/calcSpendMilesLk",
-					"protocol": "http",
-					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
-					],
-					"port": "9090",
-					"path": [
-						"DecisionService",
-						"rest",
-						"aflBonus",
-						"calcSpendMilesLk"
 					]
 				}
 			},
