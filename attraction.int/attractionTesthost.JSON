@@ -1,0 +1,4128 @@
+{
+	"info": {
+		"_postman_id": "c3854c6c-09e3-4f85-aa60-68a0e4c5fcd3",
+		"name": "attractionTESTHOST",
+		"description": "Сервисы по проекту привлечения в Аэрофлот Бонус",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Attraction AB",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99f7c7c3-8349-4b15-9b39-b27c4a6b4d7e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalMiles\": 500,\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"segments\": [\r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"LED\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NNOR\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 500,\r",
+							"            \"percent\": -1\r",
+							"        }      \r",
+							"    ]\r",
+							"}\r",
+							"      \r",
+							"  }\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"LED\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NNOR\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-OMS NNOR Platina",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca019786-8a35-4d4f-9d67-fb2270075718",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected ={\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1822,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"OMS\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NNOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1822,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"OMS\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NNOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"platinum\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LED-SVO-QNB",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4681c0c2-82b2-4059-af93-9ddd9ebdc38e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalMiles\": 500,\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"segments\": [\r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"LED\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"Q\",\r",
+							"            \"fareBasisCode\": \"QNB\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 500,\r",
+							"            \"percent\": -1\r",
+							"        }      \r",
+							"    ]\r",
+							"}\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"LED\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"Q\",\r\n          \"fareBasisCode\": \"QNB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-TD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fbf3dad2-04cc-4274-89be-e9c00a3ac62a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"segments\": [\r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"Q\",\r",
+							"            \"fareBasisCode\": \"QNB\",\r",
+							"            \"ticketDesignator\": \"LSDP65AB\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        } \r",
+							"    ]\r",
+							"}\r",
+							"\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"Q\",\r\n          \"fareBasisCode\": \"QNB\",\r\n          \"ticketDesignator\": \"LSDP65AB\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-KVON",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a9fa81c-ec82-4fe4-ba8c-517c9d3533e0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalMiles\": 2585,\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KVON\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2585,\r",
+							"            \"percent\": -1\r",
+							"        }     \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KVON\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-NVTN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "75ef2188-eab9-458e-9c9a-d78ed8b0a641",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1551,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NVTN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1551,\r",
+							"            \"percent\": -1\r",
+							"        }     \r",
+							"    ]\r",
+							"}\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NVTN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-SVX-NVOR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d9d5ae2-5cea-42df-9138-ddabc98f593a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 667,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"SVX\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NVOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 667,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"SVX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NVOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-SVX-NVOR Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c5492bd2-c86a-4e7e-a16f-ace8a6235244",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1334,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"SVX\",\r",
+							"            \"bookingClassCode\": \"E\",\r",
+							"            \"fareBasisCode\": \"EFOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1334,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"SVX\",\r\n          \"bookingClassCode\": \"E\",\r\n          \"fareBasisCode\": \"EFOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-BPXAS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "be1aa11e-958f-42d6-b07a-e398d72dfca7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 517,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"B\",\r",
+							"            \"fareBasisCode\": \"BPXAS\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 517,\r",
+							"            \"percent\": -1\r",
+							"        }     \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"B\",\r\n          \"fareBasisCode\": \"BPXAS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-VVO-BPXAS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9a4c47f-c13c-4d2f-9eba-2239e2d0e95c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 997,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"VVO\",\r",
+							"            \"bookingClassCode\": \"B\",\r",
+							"            \"fareBasisCode\": \"BPXAS\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 997,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"B\",\r\n          \"fareBasisCode\": \"BPXAS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-CFPL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "679273c0-79cd-4160-b1cd-5a96c6c4f777",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 5170,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"C\",\r",
+							"            \"fareBasisCode\": \"CFOL\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 5170,\r",
+							"            \"percent\": -1\r",
+							"        }     \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"C\",\r\n          \"fareBasisCode\": \"CFOL\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-KFRLN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b5c00de6-d8a1-41ba-ab30-6072d47b4b5c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 3102,\r",
+							"    \"segments\": [ \r",
+							"       {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KFLN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 3102,\r",
+							"            \"percent\": -1\r",
+							"        }     \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KFLN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-VVO-KFRLN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "332ee0bf-eaba-4be8-bd57-18e1aa1d2e54",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 5984,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"VVO\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KFLN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 5984,\r",
+							"            \"percent\": -1\r",
+							"        }      \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KFLN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-ACTHN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "acfc7030-aae3-45d3-a752-212993fdd74a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 3102,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"A\",\r",
+							"            \"fareBasisCode\": \"ACTHN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 3102,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"A\",\r\n          \"fareBasisCode\": \"ACTHN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-KDYBRVSJDN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "22aaee5c-f423-49f3-ab89-e1f5a0e346ed",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KDYBRVSJDN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }      \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KDYBRVSJDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-KDSOCSJDN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fa765c4d-249e-40a9-95e9-d725246de4ea",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 517,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KDSOCSJDN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 517,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":   {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KDSOCSJDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-KPSE3SSDN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd1952d7-2308-416a-a95a-e343d38aad01",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"KPSE3SSDN\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KPSE3SSDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-CID750SC",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ebda52a8-7db1-4b8a-aeb1-c0818b9088bc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"CID750SC\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"CID750SC\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-QEPSCVS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4634348c-5210-4bf7-96c0-6db1c571d532",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 2068,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"K\",\r",
+							"            \"fareBasisCode\": \"QEPSCVS\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2068,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"QEPSCVS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-X-class",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6911a999-160f-4746-8b4d-0ea05b320346",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"X\",\r",
+							"            \"fareBasisCode\": \"XPLKNJB\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"X\",\r\n          \"fareBasisCode\": \"XPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-T-class-TD-FSSLADMA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "07697ebf-cc41-4698-b4ec-633a32283ea3",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"T\",\r",
+							"            \"fareBasisCode\": \"TPLKNJB\",\r",
+							"            \"ticketDesignator\": \"FSSLADMA\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"T\",\r\n          \"fareBasisCode\": \"TPLKNJB\",\r\n          \"ticketDesignator\": \"FSSLADMA\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-T-class",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0143127f-6181-4563-8e12-5ff4cc34596c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1551,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"T\",\r",
+							"            \"fareBasisCode\": \"TPLKNJB\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1551,\r",
+							"            \"percent\": -1\r",
+							"        }        \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"T\",\r\n          \"fareBasisCode\": \"TPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-W-class",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ca85bf3c-4d70-45c9-9460-9178b26546d6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 4136,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"WPLKNJB\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 4136,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"W\",\r\n          \"fareBasisCode\": \"WPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-HID50PLD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2e2639c-e021-4320-a115-bc3eac6496fe",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 2068,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"H\",\r",
+							"            \"fareBasisCode\": \"HID50PLD\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2068,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"H\",\r\n          \"fareBasisCode\": \"HID50PLD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-KJA-RNSDF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc164aff-0d59-4b96-a924-eb3a9e799ff0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1551,\r",
+							"    \"segments\": [ \r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"KJA\",\r",
+							"            \"bookingClassCode\": \"R\",\r",
+							"            \"fareBasisCode\": \"RNODF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1551,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RNODF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-VVO-RNSDF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84bf49cd-b61d-4f37-8ec7-36eb58544ffb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 997,\r",
+							"    \"segments\": [ \r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"VVO\",\r",
+							"            \"bookingClassCode\": \"R\",\r",
+							"            \"fareBasisCode\": \"RNSDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 997,\r",
+							"            \"percent\": -1\r",
+							"        }       \r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3956eec5-e79b-4282-b132-30cae29c0533",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"partial\",\r",
+							"    \"totalMiles\": 500,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"PR\",\r",
+							"            \"fareBasisCode\": \"PLCRNSDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": null\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRG\",\r",
+							"            \"bookingClassCode\": \"R\",\r",
+							"            \"fareBasisCode\": \"RSSDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 500,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"PR\",\r\n          \"fareBasisCode\": \"PLCRNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RSSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nodata",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d89b115b-89bf-49be-9f83-9f1098974e74",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"nodata\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"PR\",\r",
+							"            \"fareBasisCode\": \"PLCRNSDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": null\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRX\",\r",
+							"            \"bookingClassCode\": \"R\",\r",
+							"            \"fareBasisCode\": \"RSODF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": 25\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"PR\",\r\n          \"fareBasisCode\": \"PLCRNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RSODF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "full",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3c64f852-11ca-4486-9e50-5cf3d68179c1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 3106,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCOSD\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2068,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRG\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCLDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1038,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "full-TD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42675eb3-972b-4df7-9c24-0e90d0cd87d9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1038,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCFSD\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRG\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCLDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1038,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCFSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "full-TD2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "caa89d97-c600-4dcb-a456-4cf6bc86b87c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 2068,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCOSD\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2068,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRG\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCSDF\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCSDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partial-TD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b430dbd0-66f3-4900-9a1d-c6e805ae2e42",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"partial\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCFSD\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRG\",\r",
+							"            \"bookingClassCode\": \"NK\",\r",
+							"            \"fareBasisCode\": \"ZZNCSDF\",\r",
+							"            \"ticketDesignator\": \"DP10\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": null\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCFSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"NK\",\r\n          \"fareBasisCode\": \"ZZNCSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "partial-TD City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "89b00125-e5c5-400c-a2be-ea46ea5c4aef",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"partial\",\r",
+							"    \"totalMiles\": 2068,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCOSD\",\r",
+							"            \"ticketDesignator\": \"XDP10\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2068,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRX\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCLDF\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": 100\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"XDP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order segments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "97ad7694-332e-445c-b985-de1e094e13f0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"partial\",\r",
+							"    \"totalMiles\": 5731,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"IST\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DFOVWER\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 2723,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"IST\",\r",
+							"            \"destinationIATA\": \"AER\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DFOVWER\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": 250\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"AER\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DFOVWER\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 3008,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"__DecisionID__\": \"string\",\n\"attractionABRequest\":  {\n    \"data\": {\n        \"segments\": [\n            {\n        \t\t\"airlineIATA\": \"SU\",\n                \"originIATA\": \"SVO\",\n                \"destinationIATA\": \"IST\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            },\n             {\n        \t\t \"airlineIATA\": \"SU\",\n                \"originIATA\": \"IST\",\n                \"destinationIATA\": \"AER\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            },\n             {\n        \t\t\"airlineIATA\": \"SU\",\n                \"originIATA\": \"AER\",\n                \"destinationIATA\": \"LED\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            }\n        ]\n    }\n}\n\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Airport case 04",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a0d8871-c54a-4bcf-8be7-7348f40a0ab4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 500,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KHV\",\r",
+							"            \"destinationIATA\": \"UUS\",\r",
+							"            \"bookingClassCode\": \"Q\",\r",
+							"            \"fareBasisCode\": \"Floi\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 500,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n\t\"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KHV\",\r\n                \"destinationIATA\": \"UUS\",\r\n                \"bookingClassCode\": \"Q\",\r\n                \"fareBasisCode\": \"Floi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Airport case 03",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b2a4b149-19dd-495f-b7eb-3f28ace4f7af",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1000,\r",
+							"    \"segments\": [\r",
+							"         {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KHV\",\r",
+							"            \"destinationIATA\": \"UUS\",\r",
+							"            \"bookingClassCode\": \"Q\",\r",
+							"            \"fareBasisCode\": \"BFOloi\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1000,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KHV\",\r\n                \"destinationIATA\": \"UUS\",\r\n                \"bookingClassCode\": \"Q\",\r\n                \"fareBasisCode\": \"BFOloi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Airport case 01",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "169a509f-bedf-42de-abd2-0d2444548bb4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KGD\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"V\",\r",
+							"            \"fareBasisCode\": \"BFloi\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KGD\",\r\n                \"destinationIATA\": \"SVO\",\r\n                \"bookingClassCode\": \"V\",\r\n                \"fareBasisCode\": \"BFloi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nodata-city-TD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c741b72c-f119-4cb5-809c-00f1ddf3b635",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"nodata\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"KJA\",\r",
+							"            \"destinationIATA\": \"SVZ\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCOSD\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": 100\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PRX\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NCLDF\",\r",
+							"            \"ticketDesignator\": \"XDP60\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": 100\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVZ\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SF 02 case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c008521e-c56f-423c-a5a3-376799783567",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected ={\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"  \"totalStatus\": \"full\",\r",
+							"  \"totalMiles\": 851,\r",
+							"  \"segments\": [\r",
+							"   {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"AER\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"KID50dfghh\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 851,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"  ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"AER\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"KID50dfghh\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SF 01 case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8fdb7c66-380d-423f-9c4e-fd5222c878d9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1277,\r",
+							"    \"segments\": [\r",
+							"       {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"AER\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"YPASSJK\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1277,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"AER\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"YPASSJK\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nodata case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8dbf11d1-a30a-42fd-befb-9cd861d3f7cb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"nodata\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"ROX\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"\",\r",
+							"            \"ticketDesignator\": \"129ID129sdfg\",\r",
+							"            \"status\": \"nodata\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": null\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"ROX\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"\",\r\n                \"ticketDesignator\": \"129ID129sdfg\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TD case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1d6d8098-8288-41ce-9f8c-15c4ca0be382",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"CFGTR\",\r",
+							"            \"ticketDesignator\": \"129ID129sdfg\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"CFGTR\",\r\n                \"ticketDesignator\": \"129ID129sdfg\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BC case 01",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3650bddb-d2b2-4d0f-b44d-bc01e0548789",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1000,\r",
+							"    \"segments\": [\r",
+							"       {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"S\",\r",
+							"            \"fareBasisCode\": \"\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1000,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"S\",\r\n                \"fareBasisCode\": \"\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SF 03 case",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aed63039-814d-4346-a366-d2b4fdfb2043",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 0,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"W\",\r",
+							"            \"fareBasisCode\": \"CFGFR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 0,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"CFGFR\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Airport case 02",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "58261409-845e-4759-b78d-2865f15068a5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1702,\r",
+							"    \"segments\": [\r",
+							"       {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"AER\",\r",
+							"            \"bookingClassCode\": \"V\",\r",
+							"            \"fareBasisCode\": \"BFOloi\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1702,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"AER\",\r\n                \"bookingClassCode\": \"V\",\r\n                \"fareBasisCode\": \"BFOloi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-LED-NFOR-silver",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d27b1a41-2ed5-4558-8109-f9e05f9b279a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 875,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NFOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 875,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"LED\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NFOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"silver\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-LED-DBOR-silver",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a6385e1-cfde-4f39-8b99-3386d81c6ce6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 875,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DBOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 875,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"LED\",\r\n          \"bookingClassCode\": \"D\",\r\n          \"fareBasisCode\": \"DBOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"silver\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-LED-DCOR-silver",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac77a0e5-dfe8-45b6-923c-279210324ff2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1125,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DCOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1125,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"LED\",\r\n          \"bookingClassCode\": \"D\",\r\n          \"fareBasisCode\": \"DCOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"silver\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SVO-LED-DCOR-silver Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cafdc048-b966-4a2e-accf-28b92a23fa8c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 1375,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"LED\",\r",
+							"            \"bookingClassCode\": \"D\",\r",
+							"            \"fareBasisCode\": \"DFOR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1375,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"LED\",\r\n          \"bookingClassCode\": \"D\",\r\n          \"fareBasisCode\": \"DFOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"silver\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PEE-SVO-PKC-NFMR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6e95678a-08e4-4083-9b04-754372c6712d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"attractionABResponse\": {\r",
+							"    \"totalStatus\": \"full\",\r",
+							"    \"totalMiles\": 7370,\r",
+							"    \"segments\": [\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"PEE\",\r",
+							"            \"destinationIATA\": \"SVO\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NFMR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 1067,\r",
+							"            \"percent\": -1\r",
+							"        },\r",
+							"        {\r",
+							"            \"airlineIATA\": \"SU\",\r",
+							"            \"originIATA\": \"SVO\",\r",
+							"            \"destinationIATA\": \"PKC\",\r",
+							"            \"bookingClassCode\": \"N\",\r",
+							"            \"fareBasisCode\": \"NFMR\",\r",
+							"            \"ticketDesignator\": \"\",\r",
+							"            \"status\": \"full\",\r",
+							"            \"miles\": 6303,\r",
+							"            \"percent\": -1\r",
+							"        }\r",
+							"    ]\r",
+							"}}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-IBM-Client-Id}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"PEE\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NFMR\",\r\n          \"ticketDesignator\": \"\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PKC\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NFMR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/aflBonus/3.0/calcSegmentsCharge",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"aflBonus",
+						"3.0",
+						"calcSegmentsCharge"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7d059f3a-6d8e-4c0b-a326-76922f227192",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b215dd96-d859-4cfb-9b10-930ed836505c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
