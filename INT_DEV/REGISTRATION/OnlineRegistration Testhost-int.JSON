@@ -1,0 +1,541 @@
+{
+	"info": {
+		"_postman_id": "f0a60db4-cb63-4b28-958c-3e80723514f9",
+		"name": "OnlineRegistration Testhost-int",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SU-SEL-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84f0b8c6-0690-4698-bd72-fd5531e8c4c7",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"        \"airlineCode\": \"SU\",\r",
+							"        \"flightNumber\": 5100,\r",
+							"        \"departureAirportCode\": \"SEL\",\r",
+							"        \"ssrCodes\": [\r",
+							"            \"AVIH2\"\r",
+							"        ],\r",
+							"        \"onlineRegistrationAvailable\": false\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-SEL-AVIH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2f24bfa6-93aa-4d50-8591-56f6ae684df2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"        \"airlineCode\": \"SU\",\r",
+							"        \"flightNumber\": 5100,\r",
+							"        \"departureAirportCode\": \"SEL\",\r",
+							"        \"ssrCodes\": [\r",
+							"            \"AVIH\"\r",
+							"        ],\r",
+							"        \"onlineRegistrationAvailable\": false\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-ICN-AVIH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "890974e6-8660-4260-95bf-3508370ff3ad",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected = {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"        \"airlineCode\": \"SU\",\r",
+							"        \"flightNumber\": 5100,\r",
+							"        \"departureAirportCode\": \"ICN\",\r",
+							"        \"ssrCodes\": [\r",
+							"            \"AVIH\"\r",
+							"        ],\r",
+							"        \"onlineRegistrationAvailable\": false\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-ICN-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "004b1820-e66b-4a67-85bd-2e3522d78421",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected =  {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"        \"airlineCode\": \"SU\",\r",
+							"        \"flightNumber\": 5100,\r",
+							"        \"departureAirportCode\": \"ICN\",\r",
+							"        \"ssrCodes\": [\r",
+							"            \"AVIH2\"\r",
+							"        ],\r",
+							"        \"onlineRegistrationAvailable\": true\r",
+							"    }\r",
+							"}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DL-ICN-AVIH2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62745c1d-abf7-4939-ae18-2397c875486a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () =>  {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"  var jsonExpected = {\r",
+							"    \"airlineCode\": \"DL\",\r",
+							"    \"flightNumber\": 300,\r",
+							"    \"departureAirportCode\": \"ICN\",\r",
+							"    \"ssrCodes\": [\r",
+							"      \"AVIH2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": true\r",
+							"  } }\r",
+							"  \r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"DL\",\r\n    \"flightNumber\": 300,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n\r\n}\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-KZN-INAD2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99f3ca5e-58f2-494f-93f6-7cbfffc9c274",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected =  {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 100,\r",
+							"    \"departureAirportCode\": \"KSN\",\r",
+							"    \"ssrCodes\": [\r",
+							"      \"INAD2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"  }}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"KSN\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}\r\n\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SU-SPU-INAD2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50bd9077-389e-43fc-9a96-2e6649b65408",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected =  {\r",
+							"    \"__DecisionID__\": \"string\",\r",
+							"    \"checkOnlineRegistrationAvailableResponse\": {\r",
+							"    \"airlineCode\": \"SU\",\r",
+							"    \"flightNumber\": 100,\r",
+							"    \"departureAirportCode\": \"SPU\",\r",
+							"    \"ssrCodes\": [\r",
+							"      \"INAD2\"\r",
+							"    ],\r",
+							"    \"onlineRegistrationAvailable\": false\r",
+							"  }}\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-IBM-Client-ID",
+						"type": "text",
+						"value": "{{X-ibm-client-ID}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"SPU\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}\r\n\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"protocol": "http",
+					"host": [
+						"172",
+						"20",
+						"207",
+						"70"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"onlinereg_{{intTypeName}}",
+						"checkOnlineRegistrationAvailability"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "13a1c251-e8e4-4636-ba1e-42e59588833a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9d6ce215-19d9-412e-9efc-fbba03e4b53c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6bc9b9bc-3505-44bf-beda-4589d97bad40",
+			"key": "URL",
+			"value": "https://gw.aeroflot.io/api/pr/flightInfo/v1/checkOnlineRegistrationAvailability",
+			"type": "string"
+		},
+		{
+			"id": "9bc3eb00-5af0-41b8-9b47-26a505b781be",
+			"key": "X-ibm-client-ID",
+			"value": "ef6bdfdb-63f0-465b-9324-4e52f15ae8ed",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

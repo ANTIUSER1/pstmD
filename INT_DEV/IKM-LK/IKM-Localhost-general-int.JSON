@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "ea18c236-c25a-4c0e-87a1-5660d09ea4b7",
+		"name": "IKM-Localhost-general-int",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Spend_lk",
+			"item": [
+				{
+					"name": "Spend_Lk",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"lkRequest\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"all\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/DecisionService/rest/lk_{{intTypeName}}/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"DecisionService",
+								"rest",
+								"lk_{{intTypeName}}",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spend_Lk (awardType = ticket)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a24e3cc-44a5-47f0-922a-5e0db190c9f5",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only 1 element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards.length).to.eql(1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only OW element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards[0].awardType).to.eql(\"OW\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"lkRequest\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"ticket\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/DecisionService/rest/lk_{{intTypeName}}/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"DecisionService",
+								"rest",
+								"lk_{{intTypeName}}",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Spend",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"spendRequest\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"VVO\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": 10000,\r\n      \"milesMax\": 250000\r\n    },\r\n    \"isOnlyAfl\": false,\r\n    \"isRoundTrip\": false,\r\n    \"classOfService\": {\r\n    \t\"classOfServiceName\": \"Economy\"\r\n    },\r\n      \"awardType\": \"all\",\r\n    \"lang\": \"ru\"\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{intTypeName}}/calcSpendMiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"ikm_{{intTypeName}}",
+						"calcSpendMiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grouping",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n \r\n  \"groupingRequest\": {\r\n\r\n  },\r\n  \"__DecisionID__\": \"string\"\r\n}\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{intTypeName}}/grouping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"ikm_{{intTypeName}}",
+						"grouping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Charge",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeRequest\": {\r\n    \"airline\": {\r\n      \"airlineCode\": \"SU\"\r\n    },\r\n    \"origin\": {\r\n      \"airport\": {\r\n        \"airportCode\": \"SVO\"\r\n      }\r\n    },\r\n    \"destination\": {\r\n      \"airport\": {\r\n        \"airportCode\": \"AER\"\r\n      }\r\n    },\r\n    \"tierLevel\": {\r\n      \"tierLevelCode\": \"basic\"\r\n    },\r\n    \"isRoundTrip\": false\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{intTypeName}}/calcChargedMiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"ikm_{{intTypeName}}",
+						"calcChargedMiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChargeLoyalty",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 10000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{intTypeName}}/chargeLoyalty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"DecisionService",
+						"rest",
+						"pkl_{{intTypeName}}",
+						"chargeLoyalty"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
