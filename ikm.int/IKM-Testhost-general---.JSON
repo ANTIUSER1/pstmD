@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ea18c236-c25a-4c0e-87a1-5660d09ea4b7",
-		"name": "IKM-Localhost-general",
+		"_postman_id": "abe8e9b7-e2ee-4235-8149-270777cb41e2",
+		"name": "IKM-Testhost-general---",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -29,16 +29,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/DecisionService/rest/ikm_{{srvTypeName}}/calcSpendMilesLk",
+							"raw": "http://172.20.207.70:9090/DecisionService/rest/lk_{{typeName}}/calcSpendMilesLk",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"172.20.207.70"
 							],
 							"port": "9090",
 							"path": [
 								"DecisionService",
 								"rest",
-								"ikm_{{srvTypeName}}",
+								"lk_{{typeName}}",
 								"calcSpendMilesLk"
 							]
 						}
@@ -51,7 +51,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0a24e3cc-44a5-47f0-922a-5e0db190c9f5",
+								"id": "e648bffc-7a2c-4a22-9739-223178096156",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
@@ -94,16 +94,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/DecisionService/rest/lk_{{srvTypeName}}/calcSpendMilesLk",
+							"raw": "http://172.20.207.70:9090/DecisionService/rest/lk_{{typeName}}/calcSpendMilesLk",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"172.20.207.70"
 							],
 							"port": "9090",
 							"path": [
 								"DecisionService",
 								"rest",
-								"lk_{{srvTypeName}}",
+								"lk_{{typeName}}",
 								"calcSpendMilesLk"
 							]
 						}
@@ -136,16 +136,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{srvTypeName}}/calcSpendMiles",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{srvTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -175,16 +178,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{srvTypeName}}/grouping",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/ikm_{{typeName}}/grouping",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{srvTypeName}}",
+						"ikm_{{typeName}}",
 						"grouping"
 					]
 				}
@@ -212,16 +218,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{srvTypeName}}/calcChargedMiles",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/ikm_{{typeName}}/calcChargedMiles",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{srvTypeName}}",
+						"ikm_{{typeName}}",
 						"calcChargedMiles"
 					]
 				}
@@ -249,16 +258,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{srvTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{srvTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}

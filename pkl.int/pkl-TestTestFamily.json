@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "6556ca1a-3f56-4d54-b34f-1283bdbbf9a4",
-		"name": "pklLocalhost TestFamily-dev",
+		"_postman_id": "e38c6a38-4ce5-4428-a659-fdce6b115d18",
+		"name": "pkl-TestTestFamily",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -23,16 +23,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 500,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -45,7 +48,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "84679f70-fc43-4df2-8843-c3e79ee6c765",
+						"id": "6607d5f6-cd05-4f5c-af86-a4f58bbc562a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -86,16 +89,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -108,7 +114,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "29c3d596-3c27-4808-ab29-17bf12c106ac",
+						"id": "a4951231-cec8-4824-82f8-d002aabe8add",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -149,16 +155,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -171,7 +180,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "07eadcea-8fc3-4d3c-b742-a757d099d431",
+						"id": "4d4410c1-9f69-4fc7-973a-9801854a7a3b",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -212,16 +221,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2.5\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -234,7 +246,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1a1c3333-247c-4cdf-822e-56e1d6d2bb11",
+						"id": "0425854c-64c5-4a43-9292-cfa609d111cc",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -275,16 +287,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -297,20 +312,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9787b506-198f-4f0a-a0ba-5f8ee934fb4e",
+						"id": "b31e63ea-aa48-4cdd-8e61-9c05d0ab74fd",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"  pm.response.to.have.status(500);\r",
 							"});\r",
 							"\r",
 							"pm.test('should have expected response', () => {\r",
-							"  var jsonExpected = {\r",
-							"    \"__DecisionID__\": \"string\",\r",
-							"    \"chargeLoyaltyResponse\": {\r",
-							"        \"errCode\": \"[accountingCode] parameter is incorrect\",\r",
-							"        \"errMessage\": \"[accountingCode] parameter received DXT01_35 not found\",\r",
-							"        \"data\": null\r",
-							"    }\r",
+							"  var jsonExpected ={\r",
+							"    \"code\": 500,\r",
+							"    \"message\": \"An error occurred during the execution of the ruleset. Make sure that the request is valid, and review the ruleset and execution object model if applicable.\",\r",
+							"    \"details\": \"Error when executing the ruleset /pkl_dev/chargeLoyalty.\\nIncorrect request params. [accountingCode] parameter received DXT01_35 not found\\n\",\r",
+							"    \"errorCode\": \"GBRXH0504E\"\r",
 							"}\r",
 							"  pm.response.to.have.body(jsonExpected);\r",
 							"});"
@@ -335,16 +348,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_35\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -357,20 +373,18 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d444ddc0-b205-4d26-a0e6-44c636f2bbfa",
+						"id": "da76d64e-4c50-4c3c-aa78-75e256c68691",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"  pm.response.to.have.status(500);\r",
 							"});\r",
 							"\r",
 							"pm.test('should have expected response', () => {\r",
-							"  var jsonExpected = {\r",
-							"    \"__DecisionID__\": \"string\",\r",
-							"    \"chargeLoyaltyResponse\": {\r",
-							"        \"errCode\": \"[tariffSum] parameter is incorrect\",\r",
-							"        \"errMessage\": \"[tariffSum] parameter must be more than 0 but received -1000\",\r",
-							"        \"data\": null\r",
-							"    }\r",
+							"  var jsonExpected ={\r",
+							"    \"code\": 500,\r",
+							"    \"message\": \"An error occurred during the execution of the ruleset. Make sure that the request is valid, and review the ruleset and execution object model if applicable.\",\r",
+							"    \"details\": \"Error when executing the ruleset /pkl_dev/chargeLoyalty.\\nIncorrect request params. [tariffSum] parameter must be more than 0 but received -1000\\n\",\r",
+							"    \"errorCode\": \"GBRXH0504E\"\r",
 							"}\r",
 							"  pm.response.to.have.body(jsonExpected);\r",
 							"});"
@@ -395,16 +409,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": -1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -417,7 +434,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f93a1c33-cc86-4b84-bf2a-241b9ac6fbaa",
+						"id": "d0f63532-6440-4919-b253-b7efd31967e4",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -458,16 +475,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT02\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -480,7 +500,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a97e91d6-ac42-4dfc-92d8-58fd7b53478e",
+						"id": "eb957e5c-d42d-48b7-9388-9511f2074866",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -521,16 +541,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT03\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -543,7 +566,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "650681d1-8d50-4ef7-beec-7ca471d621f7",
+						"id": "81430c9a-0e52-4543-97a2-76b59401f3f1",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -584,16 +607,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_0\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -606,7 +632,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5ab988ba-2a1b-4029-b95f-9531d2ea16f3",
+						"id": "e331476a-ea6a-402c-9e58-00b2ec30e1a4",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -647,16 +673,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}
@@ -669,7 +698,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1b3f7b6b-cd51-4b6c-a321-015b46f4831b",
+						"id": "6fa9e83e-80fe-4200-a4bd-bc02ad6c56d1",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -710,16 +739,19 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"points\",\r\n    \"data\": {\r\n      \"tariffSum\": 1000,\r\n      \"accountingCode\": \"DXT01_2.5\"\r\n    }\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/pkl_{{devTypeName}}/chargeLoyalty",
+					"raw": "http://172.20.207.70:9090/DecisionService/rest/pkl_{{typeName}}/chargeLoyalty",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"172",
+						"20",
+						"207",
+						"70"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"pkl_{{devTypeName}}",
+						"pkl_{{typeName}}",
 						"chargeLoyalty"
 					]
 				}

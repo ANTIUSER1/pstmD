@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f837ea1b-2ff3-414c-a2dc-940652092281",
-		"name": "spendLocalhosrIncorrectParameters TestFamily-dev",
+		"_postman_id": "d45fcb53-6673-491b-810a-ef68655e1759",
+		"name": "spend-LocalhosrIncorrectParameters TestFamily--",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "00e6ce2c-d277-49a8-8a59-974f8867d1f0",
+						"id": "7cd01f7d-bc9b-4394-b85e-adac4b1d5150",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -42,7 +42,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -51,7 +51,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -64,7 +64,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ead0fb93-4793-44de-a5cf-8ae4d20dc59d",
+						"id": "25eb29de-f773-48e1-ad64-2d2543a5ddef",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -95,7 +95,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +104,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -117,7 +117,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "08e8bd80-d8d0-4998-9557-8d6bf56f2b9d",
+						"id": "c000e483-c925-4a00-be30-a13857216879",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -148,7 +148,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -157,7 +157,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -170,7 +170,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "dc31e228-c7b0-4d45-87e0-9d19793725c9",
+						"id": "e12b66b3-ba93-4c7c-8fe0-8e7f7fc4bd26",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -201,7 +201,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -210,7 +210,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -223,7 +223,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c84fee94-8d63-49e6-93a7-b34ac9453cc8",
+						"id": "478e455c-b015-4fbb-a060-2caedc607638",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -254,7 +254,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -263,7 +263,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -276,7 +276,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4cb5752b-5cf5-4fad-ab76-62ea7af7562f",
+						"id": "f963b7b4-4ad6-401a-800b-55c0ee45d2b9",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -307,7 +307,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -316,7 +316,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -329,7 +329,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8c735717-8814-4b25-a3a0-1e848d24acb5",
+						"id": "7908bef1-1769-40df-bfd3-c3cdadd88803",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -360,7 +360,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -369,7 +369,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -382,7 +382,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "24b9f5a0-4320-41d3-9331-23463fd90582",
+						"id": "233d42b9-a319-4ed0-9889-3854ef2d0e33",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -413,7 +413,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -422,7 +422,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -435,7 +435,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "214b1a5b-9cc2-48b6-b00f-3e47f8ca71c4",
+						"id": "d3be2fce-64be-41f0-bc9d-9902731b4d48",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -466,7 +466,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -475,7 +475,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -488,7 +488,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fb3272fb-b8a5-4550-8740-80f55c9ded37",
+						"id": "acf3a9d5-8779-4bc4-8cb5-1145c25e18cc",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -519,7 +519,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -528,7 +528,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -541,7 +541,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4fdd33ef-2003-4c9e-85a6-c67b24f8e38b",
+						"id": "665e0fbf-0231-4789-9576-26d667932414",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -572,7 +572,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -581,7 +581,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -594,7 +594,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "18dc1e9c-7dc3-4bc7-bc1a-f40d36bdf7b6",
+						"id": "fd1c0da0-46d8-482c-a11d-3884e7b1e7e8",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -625,7 +625,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -634,7 +634,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -647,7 +647,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4586a90b-7070-462d-b600-e9a288d6bf6e",
+						"id": "b3255bce-e118-42bc-8afb-ae887ddc394a",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -678,7 +678,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -687,7 +687,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -700,7 +700,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4c838de1-4564-4b95-acb8-88669e993028",
+						"id": "4880edda-e405-4466-b1b1-1eb73309cab7",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -731,7 +731,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -740,7 +740,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -753,7 +753,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5b47b70d-575d-4a23-88a9-723bc105625c",
+						"id": "c03d37f9-5155-4f0c-b666-459965b360c6",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -784,7 +784,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -793,7 +793,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -806,7 +806,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7753fdfc-1a3c-4159-9a80-7cf9e99cb6be",
+						"id": "35ad1a90-deba-4c76-b21e-41a6c41b4e34",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -837,7 +837,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -846,7 +846,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -859,7 +859,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a2ab2da6-0cff-47ed-b163-4c0c7c573ea9",
+						"id": "086a37e2-ebb8-4c23-841e-96be5bd2f0c4",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -890,7 +890,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -899,7 +899,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -912,13 +912,15 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "35600586-d1b9-46b9-bbae-e5282db47afb",
+						"id": "f1acb807-ab9f-46d5-a596-d0bb90e8cb06",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"  pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
 							"pm.test('should have expected response', () => {\r",
+							"  var jsonExpected =\r",
+							"  {\r",
 							"    \"__DecisionID__\": \"string\",\r",
 							"    \"spendResponse\": {\r",
 							"        \"awardRoutes\": [\r",
@@ -4649,7 +4651,7 @@
 							"        ]\r",
 							"    }\r",
 							"}\r",
-							"    pm.response.to.have.body(jsonExpected);\r",
+							"  pm.response.to.have.body(jsonExpected);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -4677,7 +4679,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4686,7 +4688,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4699,7 +4701,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e8ed7aa4-a321-44dc-8973-e369226069d2",
+						"id": "376d71e6-0a2d-4838-873e-102e8627267c",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -4730,7 +4732,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4739,7 +4741,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4752,7 +4754,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3e6b5e76-e968-4334-bfca-16c70b74c39c",
+						"id": "7ea7f89e-972d-48dc-8f21-bd1e6ab55453",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -4783,7 +4785,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4792,7 +4794,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4805,7 +4807,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "09763c49-b8cd-4d3e-89c9-bec15240d626",
+						"id": "cae0dafa-a469-4f9e-8c53-078e45690e69",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -4836,7 +4838,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4845,7 +4847,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4858,7 +4860,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "42a0b1d2-dc06-44cf-95f5-1c400932f4ad",
+						"id": "174ec51e-18ce-426c-bb7c-c7e38acd6d11",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -4889,7 +4891,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4898,7 +4900,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4911,7 +4913,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "eaf68205-78d5-4d2b-8511-d16d457002db",
+						"id": "040ab312-fe7c-4798-9346-4fa29a4b1c96",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -4942,7 +4944,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -4951,7 +4953,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -4964,7 +4966,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a8998abe-eeef-4fcc-96e7-bc4a7971071f",
+						"id": "204c9510-b6ad-4167-ad68-77799ca8e230",
 						"exec": [
 							"pm.test(\"Status code is 500\", function () {\r",
 							"    pm.response.to.have.status(500);\r",
@@ -4995,7 +4997,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -5004,7 +5006,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -5017,7 +5019,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d6d781fd-b837-4e28-b033-a33d88ee0cf0",
+						"id": "50e27bfe-dfa2-4359-8564-88e6c857d4ad",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -5048,7 +5050,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -5057,7 +5059,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -5070,7 +5072,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "824becdb-a66c-4d23-b728-1fc4f604924b",
+						"id": "e1b7f24a-0cb1-402a-b8c8-f049b66559f3",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -5101,7 +5103,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -5110,7 +5112,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}
@@ -5123,7 +5125,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "0bb11be0-d5fe-40dd-91ce-4b254675940d",
+						"id": "f3b7787e-54ed-4eca-8405-116512619949",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -5154,7 +5156,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{devTypeName}}/calcSpendMiles",
+					"raw": "http://localhost:9090/DecisionService/rest/ikm_{{typeName}}/calcSpendMiles",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -5163,7 +5165,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"ikm_{{devTypeName}}",
+						"ikm_{{typeName}}",
 						"calcSpendMiles"
 					]
 				}

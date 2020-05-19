@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "50318207-cf34-4f3c-9ba3-8a6132252cbd",
-		"name": "attractionLocalhost TestFamily-dev",
+		"name": "attractionLocalhost TestFamily-",
 		"description": "Сервисы по проекту привлечения в Аэрофлот Бонус",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -67,7 +67,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"LED\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NNOR\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -76,7 +76,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -144,7 +144,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"OMS\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NNOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"platinum\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -153,7 +153,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -221,7 +221,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"LED\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"Q\",\r\n          \"fareBasisCode\": \"QNB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -230,7 +230,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -302,7 +302,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -311,7 +311,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -378,7 +378,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KVON\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -387,7 +387,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -455,7 +455,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NVTN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -464,7 +464,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -532,7 +532,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"SVX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NVOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -541,7 +541,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -608,7 +608,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"SVX\",\r\n          \"bookingClassCode\": \"E\",\r\n          \"fareBasisCode\": \"EFOR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -617,7 +617,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -684,7 +684,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"B\",\r\n          \"fareBasisCode\": \"BPXAS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -693,7 +693,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -760,7 +760,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"B\",\r\n          \"fareBasisCode\": \"BPXAS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -769,7 +769,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -836,7 +836,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"C\",\r\n          \"fareBasisCode\": \"CFOL\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -845,7 +845,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -912,7 +912,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KFLN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -921,7 +921,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -988,7 +988,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KFLN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -997,7 +997,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1064,7 +1064,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"A\",\r\n          \"fareBasisCode\": \"ACTHN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1073,7 +1073,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1140,7 +1140,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KDYBRVSJDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1149,7 +1149,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1216,7 +1216,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":   {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KDSOCSJDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1225,7 +1225,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1292,7 +1292,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"KPSE3SSDN\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1301,7 +1301,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1368,7 +1368,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"CID750SC\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1377,7 +1377,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1444,7 +1444,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"K\",\r\n          \"fareBasisCode\": \"QEPSCVS\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1453,7 +1453,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1520,7 +1520,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"X\",\r\n          \"fareBasisCode\": \"XPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1529,7 +1529,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1596,7 +1596,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"T\",\r\n          \"fareBasisCode\": \"TPLKNJB\",\r\n          \"ticketDesignator\": \"FSSLADMA\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1605,7 +1605,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1672,7 +1672,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"T\",\r\n          \"fareBasisCode\": \"TPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1681,7 +1681,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1748,7 +1748,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"W\",\r\n          \"fareBasisCode\": \"WPLKNJB\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1757,7 +1757,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1824,7 +1824,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"H\",\r\n          \"fareBasisCode\": \"HID50PLD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1833,7 +1833,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1898,7 +1898,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"KJA\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RNODF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1907,7 +1907,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -1974,7 +1974,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"VVO\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1983,7 +1983,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2061,7 +2061,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"PR\",\r\n          \"fareBasisCode\": \"PLCRNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RSSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2070,7 +2070,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2148,7 +2148,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"PR\",\r\n          \"fareBasisCode\": \"PLCRNSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"R\",\r\n          \"fareBasisCode\": \"RSODF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2157,7 +2157,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2235,7 +2235,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2244,7 +2244,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2322,7 +2322,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCFSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2331,7 +2331,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2409,7 +2409,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCSDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2418,7 +2418,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2496,7 +2496,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCFSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRG\",\r\n          \"bookingClassCode\": \"NK\",\r\n          \"fareBasisCode\": \"ZZNCSDF\",\r\n          \"ticketDesignator\": \"DP10\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2505,7 +2505,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2583,7 +2583,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"XDP10\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2592,7 +2592,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2681,7 +2681,7 @@
 					"raw": "{\n\"__DecisionID__\": \"string\",\n\"attractionABRequest\":  {\n    \"data\": {\n        \"segments\": [\n            {\n        \t\t\"airlineIATA\": \"SU\",\n                \"originIATA\": \"SVO\",\n                \"destinationIATA\": \"IST\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            },\n             {\n        \t\t \"airlineIATA\": \"SU\",\n                \"originIATA\": \"IST\",\n                \"destinationIATA\": \"AER\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            },\n             {\n        \t\t\"airlineIATA\": \"SU\",\n                \"originIATA\": \"AER\",\n                \"destinationIATA\": \"LED\",\n                \"bookingClassCode\": \"D\",\n                \"fareBasisCode\": \"DFOVWER\",\n                \"ticketDesignator\": \"\"\n            }\n        ]\n    }\n}\n\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2690,7 +2690,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2757,7 +2757,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n\t\"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KHV\",\r\n                \"destinationIATA\": \"UUS\",\r\n                \"bookingClassCode\": \"Q\",\r\n                \"fareBasisCode\": \"Floi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2766,7 +2766,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2833,7 +2833,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":  {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KHV\",\r\n                \"destinationIATA\": \"UUS\",\r\n                \"bookingClassCode\": \"Q\",\r\n                \"fareBasisCode\": \"BFOloi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2842,7 +2842,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2909,7 +2909,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"KGD\",\r\n                \"destinationIATA\": \"SVO\",\r\n                \"bookingClassCode\": \"V\",\r\n                \"fareBasisCode\": \"BFloi\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -2918,7 +2918,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -2996,7 +2996,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"KJA\",\r\n          \"destinationIATA\": \"SVZ\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCOSD\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PRX\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NCLDF\",\r\n          \"ticketDesignator\": \"XDP60\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3005,7 +3005,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3072,7 +3072,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"AER\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"KID50dfghh\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3081,7 +3081,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3148,7 +3148,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"AER\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"YPASSJK\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3157,7 +3157,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3224,7 +3224,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"ROX\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"\",\r\n                \"ticketDesignator\": \"129ID129sdfg\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3233,7 +3233,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3300,7 +3300,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t\"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"CFGTR\",\r\n                \"ticketDesignator\": \"129ID129sdfg\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3309,7 +3309,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3376,7 +3376,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"S\",\r\n                \"fareBasisCode\": \"\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3385,7 +3385,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3452,7 +3452,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n        \t\t \"airlineIATA\": \"SU\",\r\n                \"originIATA\": \"SVO\",\r\n                \"destinationIATA\": \"LED\",\r\n                \"bookingClassCode\": \"W\",\r\n                \"fareBasisCode\": \"CFGFR\",\r\n                \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"ru\"\r\n}\r\n\r\n\r\n\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3461,7 +3461,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3531,7 +3531,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3540,7 +3540,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3610,7 +3610,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3619,7 +3619,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3689,7 +3689,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3698,7 +3698,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3768,7 +3768,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3777,7 +3777,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3847,7 +3847,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3856,7 +3856,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]
@@ -3934,7 +3934,7 @@
 					"raw": "{\r\n\"__DecisionID__\": \"string\",\r\n\"attractionABRequest\":     {\r\n    \"data\": {\r\n      \"segments\": [\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"PEE\",\r\n          \"destinationIATA\": \"SVO\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NFMR\",\r\n          \"ticketDesignator\": \"\"\r\n        },\r\n        {\r\n          \"airlineIATA\": \"SU\",\r\n          \"originIATA\": \"SVO\",\r\n          \"destinationIATA\": \"PKC\",\r\n          \"bookingClassCode\": \"N\",\r\n          \"fareBasisCode\": \"NFMR\",\r\n          \"ticketDesignator\": \"\"\r\n        }\r\n      ],\r\n      \"tierCode\": \"basic\"\r\n    },\r\n    \"lang\": \"string\"\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{devTypeName}}/3.0/calcSegmentsCharge",
+					"raw": "http://localhost:9090/DecisionService/rest/attractionAB_{{typeName}}/3.0/calcSegmentsCharge",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -3943,7 +3943,7 @@
 					"path": [
 						"DecisionService",
 						"rest",
-						"attractionAB_{{devTypeName}}",
+						"attractionAB_{{typeName}}",
 						    
 						"calcSegmentsCharge"
 					]

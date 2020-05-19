@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f0a60db4-cb63-4b28-958c-3e80723514f9",
-		"name": "OnlineRegistration Testhost-int",
+		"_postman_id": "8ce3b4d5-fc78-4a41-a9dd-19f1f0bfd198",
+		"name": "OnlineRegistration-Localhost",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "84f0b8c6-0690-4698-bd72-fd5531e8c4c7",
+						"id": "2b4907f2-d2a0-4126-8a89-9500cef91c23",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -57,19 +57,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n}"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -82,7 +79,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2f24bfa6-93aa-4d50-8591-56f6ae684df2",
+						"id": "84316c18-52f8-45f5-b3c5-751293893c20",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -128,19 +125,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"SEL\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -153,7 +147,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "890974e6-8660-4260-95bf-3508370ff3ad",
+						"id": "a50544ed-33ec-4583-8593-12b3e0c57ae5",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -199,19 +193,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH\"\r\n    ]\r\n}\r\n\r\n}"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -224,7 +215,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "004b1820-e66b-4a67-85bd-2e3522d78421",
+						"id": "f2c474e3-7d8f-4ad8-ab23-a065c90f68bc",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -270,19 +261,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 5100,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n\r\n}\r\n\r\n"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -295,7 +283,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "62745c1d-abf7-4939-ae18-2397c875486a",
+						"id": "3b4edcec-1b99-47f9-b6d5-15b8a2441c98",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -341,19 +329,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"DL\",\r\n    \"flightNumber\": 300,\r\n    \"departureAirportCode\": \"ICN\",\r\n    \"ssrCodes\": [\r\n        \"AVIH2\"\r\n    ]\r\n}\r\n\r\n}\r\n\r\n\r\n"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -366,7 +351,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "99f3ca5e-58f2-494f-93f6-7cbfffc9c274",
+						"id": "48d9700d-765c-4cbf-b20f-21f84abbe126",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -411,19 +396,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"KSN\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}\r\n\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -436,7 +418,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "50bd9077-389e-43fc-9a96-2e6649b65408",
+						"id": "5a85f93a-f107-4a44-a9c3-96441bfa4aa2",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -481,19 +463,16 @@
 					"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"checkOlineRegistrationAvailableRequest\":{\r\n    \"airlineCode\": \"SU\",\r\n    \"flightNumber\": 100,\r\n    \"departureAirportCode\": \"SPU\",\r\n    \"ssrCodes\": [\r\n        \"INAD2\"\r\n    ]\r\n}\r\n\r\n}\r\n"
 				},
 				"url": {
-					"raw": "http://172.20.207.70:9090/DecisionService/rest/onlinereg_{{intTypeName}}/checkOnlineRegistrationAvailability",
+					"raw": "http://localhost:9090/DecisionService/rest/onlinereg_{{typeName}}/checkOnlineRegistrationAvailability",
 					"protocol": "http",
 					"host": [
-						"172",
-						"20",
-						"207",
-						"70"
+						"localhost"
 					],
 					"port": "9090",
 					"path": [
 						"DecisionService",
 						"rest",
-						"onlinereg_{{intTypeName}}",
+						"onlinereg_{{typeName}}",
 						"checkOnlineRegistrationAvailability"
 					]
 				}
@@ -505,7 +484,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "13a1c251-e8e4-4636-ba1e-42e59588833a",
+				"id": "8a4aba2e-a478-46c8-9b31-37f3d23290d3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -515,7 +494,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9d6ce215-19d9-412e-9efc-fbba03e4b53c",
+				"id": "03474a09-19e2-4046-a468-e5e858c43468",
 				"type": "text/javascript",
 				"exec": [
 					""
