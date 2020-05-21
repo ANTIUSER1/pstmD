@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "85450cb7-7f00-482e-9c50-f8815b48c8d3",
+		"name": "PKL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "internal",
+			"item": [
+				{
+					"name": "ChargeLoyalty",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"chargeLoyaltyRequest\": {\r\n    \"paymentType\": \"cash\",\r\n    \"data\": {\r\n      \"tariffSum\": 10000,\r\n      \"accountingCode\": \"DXT01_3\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostName}}/DecisionService/rest/pkl{{typeName}}/chargeLoyalty",
+							"protocol": "http",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"DecisionService",
+								"rest",
+								"pkl{{typeName}}",
+								"chargeLoyalty"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "external",
+			"item": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

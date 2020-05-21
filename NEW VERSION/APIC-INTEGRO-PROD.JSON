@@ -1,0 +1,24 @@
+{
+	"id": "6a8f6393-8ca6-47e7-a5bb-278b6ec5787f",
+	"name": "APIC-INTEGRO-PROD",
+	"values": [
+		{
+			"key": "X-IBM-Client-Id",
+			"value": "ef6bdfdb-63f0-465b-9324-4e52f15ae8ed",
+			"enabled": true
+		},
+		{
+			"key": "base-url",
+			"value": "https://gw.aeroflot.io/api/pr/",
+			"enabled": true
+		},
+		{
+			"key": "typeName",
+			"value": "int",
+			"enabled": false
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-05-21T11:55:34.918Z",
+	"_postman_exported_using": "Postman/7.24.0"
+}

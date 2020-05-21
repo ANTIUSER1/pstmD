@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "5b6db8f9-4367-4b5f-a620-08de65766202",
+		"name": "LK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "internal",
+			"item": [
+				{
+					"name": "Spend_Lk",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"lkRequest\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"all\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostName}}/DecisionService/rest/lk{{typeName}}/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"DecisionService",
+								"rest",
+								"lk{{typeName}}",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Spend_Lk (awardType = ticket)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7a9ca4e-b492-45bd-a608-fd17074aafe0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only 1 element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards.length).to.eql(1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"requiredAwards must contain only OW element\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var awards = jsonData.outputParamsLk.awardRoutes[0];\r",
+									"\r",
+									"    pm.expect(awards.requiredAwards[0].awardType).to.eql(\"OW\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"__DecisionID__\": \"string\",\r\n  \"lkRequest\": {\r\n    \"origin\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"SVO\"\r\n    },\r\n    \"destination\": {\r\n      \"locationType\": \"airport\",\r\n      \"locationCode\": \"LED\"\r\n    },\r\n    \"milesInterval\": {\r\n      \"milesMin\": -1,\r\n      \"milesMax\": 500000\r\n    },\r\n    \"isOnlyAfl\": true,\r\n    \"isRoundTrip\": false,\r\n     \"classOfService\": {\r\n    \t\"classOfServiceName\": \"economy\"\r\n    },\r\n    \"awardType\": \"ticket\",\r\n    \"lang\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://{{hostName}}/DecisionService/rest/lk{{typeName}}/calcSpendMilesLk",
+							"protocol": "http",
+							"host": [
+								"{{hostName}}"
+							],
+							"path": [
+								"DecisionService",
+								"rest",
+								"lk{{typeName}}",
+								"calcSpendMilesLk"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "external",
+			"item": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
